@@ -8,6 +8,9 @@ function Topics() {
       <Router>
         <div>
           <h2>Topics</h2>
+          
+          <hr />
+
           <ul>
             <li>
               <Link to="/first-component">First Component</Link>

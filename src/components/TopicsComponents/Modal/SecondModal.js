@@ -13,11 +13,11 @@ let checkModal = () => this.setState({isModal: false})
 
         return (
             this.state.isModal ?
-           <div className = 'modal'>
+           <div className = 'modal' onClick = {checkModal}>
                <p>Second modal window</p>
                <button type = 'button' onClick = {checkModal}>Close</button>
            </div>
-            : ''
+            : null
 
             
         )

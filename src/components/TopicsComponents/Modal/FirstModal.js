@@ -9,18 +9,18 @@ class FirstModal extends React.Component{
 
     render() {
 
-let checkModal = () => this.setState({isModal: false})
+let isModal = this.state.isModal
+let changeModal = () => this.setState(isModal ? {isModal: false} : {isModal: true})
 
         return (
-            this.state.isModal ?
-           <div className = 'modal'>
+            isModal ?
+           <div className = 'modal' onClick = {changeModal}>
                <p>First modal window</p>
-               <button type = 'button' onClick = {checkModal}>Close</button>
+               <button type = 'button' onClick = {changeModal}>Close</button>
            </div>
-            : ''
-
-            
+            : null
         )
+        
     }
 };
 
